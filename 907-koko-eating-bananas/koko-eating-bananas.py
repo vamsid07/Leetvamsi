@@ -4,9 +4,9 @@ class Solution:
             count = 0  
             for i in range(len(piles)) : 
                 count += piles[i] // ind + 1 if piles[i] % ind != 0 else piles[i] // ind
-            if count <= h : 
-                return True
-            return False
+                if count > h : 
+                    return False
+            return True
         left = 1
         right = max(piles)
         flag = 0 
