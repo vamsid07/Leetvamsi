@@ -15,8 +15,7 @@ class Solution:
         while left <= right : 
             mid = ( left + right ) // 2 
             if (check(mid)) : 
-                flag = mid 
                 left = mid + 1
             else : 
                 right = mid - 1 
-        return flag
+        return right
