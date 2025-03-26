@@ -12,7 +12,7 @@ class Solution:
                     temp -= nums[l]
                     l += 1 
                 if r - l + 1 == freq : 
-                    if (r-l+1)*nums[r] - temp <= k : 
+                    if freq*nums[r] - temp <= k : 
                         return True
                 r += 1 
             return False
