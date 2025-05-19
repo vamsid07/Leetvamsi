@@ -5,10 +5,10 @@ class Solution:
         prod = 1
         ans = 0
         left = 0
-        for right in range(len(nums)):
-            prod *= nums[right]
+        for i in range(len(nums)):
+            prod *= nums[i]
             while prod >= k:
                 prod //= nums[left]
                 left += 1
-            ans += right - left + 1
+            ans += i - left + 1
         return ans
