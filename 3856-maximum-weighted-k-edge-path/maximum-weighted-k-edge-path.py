@@ -12,9 +12,8 @@ class Solution:
             if k == 0 : 
                 return curr 
             for v,w in g[i] : 
-                nw = curr + w 
-                if nw < t :
-                    ans = go(v,k-1,nw)
+                if curr + w < t :
+                    ans = go(v,k-1,curr + w)
                     maxans = max(maxans,ans)
             return -1
         for i in range(n) : 
