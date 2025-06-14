@@ -12,13 +12,11 @@ class Solution:
         if not root : 
             return ans
         while q : 
-            n = len(q)
-            for i in range(n) : 
-                node = q.popleft() 
-                if node.left : 
-                    if node.left.left == None and node.left.right == None :
-                        ans += node.left.val
-                    q.append(node.left)
-                if node.right : 
-                    q.append(node.right)
+            node = q.popleft() 
+            if node.left : 
+                if node.left.left == None and node.left.right == None :
+                    ans += node.left.val
+                q.append(node.left)
+            if node.right : 
+                q.append(node.right)
         return ans
