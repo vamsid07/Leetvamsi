@@ -17,5 +17,5 @@ class FindSumPairs:
         ans = 0 
         for i in range(len(self.nums1)): 
             com = tot - self.nums1[i]
-            ans += self.freq.get(com, 0)
+            ans += self.freq[com]
         return ans
