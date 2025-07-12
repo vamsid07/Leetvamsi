@@ -1,6 +1,3 @@
-from typing import List
-from collections import defaultdict
-
 class Solution:
     def peopleIndexes(self, l: List[List[str]]) -> List[int]:
         n = len(l)
