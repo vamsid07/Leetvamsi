@@ -11,14 +11,12 @@ class Solution:
             for j in range(len(l[i])):
                 d[l[i][j]] += 1
             for k in range(n):
-                if i == k:
-                    continue
-                count = 0 
-                for m in range(len(l[k])):
-                    if d[l[k][m]] > 0:
-                        count += 1
-                if count == len(l[k]) :
-                    flag[k] = 1
+                if i != k:
+                    count = 0 
+                    for m in range(len(l[k])):
+                        count += d[l[k][m]]
+                    if count == len(l[k]) :
+                        flag[k] = 1
         for i in range(n):
             if flag[i] == 0:
                 ans.append(i)
