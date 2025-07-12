@@ -8,7 +8,7 @@ class Solution:
             for j in range(len(l[i])):
                 d[l[i][j]] += 1
             for k in range(n):
-                if i != k:
+                if i != k and flag[k] == 0:
                     count = 0 
                     for m in range(len(l[k])):
                         count += d[l[k][m]]
