@@ -7,8 +7,11 @@ class Solution:
         n = len(s)
         vis = set()
         ans = ""
+        maxc = list(d.values()).count(maxv)
         for i in range(n-1,-1,-1) : 
             if d[s[i]] == maxv and s[i] not in vis : 
                 ans += s[i]
                 vis.add(s[i])
+            if len(ans) == maxc : 
+                break
         return ans[::-1]
