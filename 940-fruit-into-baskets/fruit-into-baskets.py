@@ -1,20 +1,19 @@
 class Solution:
-    def totalFruit(self, nums: List[int]) -> int:
+    def totalFruit(self, fruits: List[int]) -> int:
         d = {}
         l = 0 
         r = 0 
-        n = len(nums)
-        count = 0 
+        n = len(fruits)
         ans = float('-inf')
         while r < n : 
-            if nums[r] in d : 
-                d[nums[r]] += 1 
+            if fruits[r] in d : 
+                d[fruits[r]] += 1 
             else : 
-                d[nums[r]] = 1 
-            while len(d) >= 3 : 
-                d[nums[l]] -= 1 
-                if d[nums[l]] <= 0 : 
-                    del d[nums[l]]
+                d[fruits[r]] = 1 
+            while len(d) >= 3 :
+                d[fruits[l]] -= 1 
+                if d[fruits[l]] <= 0 : 
+                    del d[fruits[l]] 
                 l += 1 
             ans = max(ans,r - l + 1)
             r += 1 
