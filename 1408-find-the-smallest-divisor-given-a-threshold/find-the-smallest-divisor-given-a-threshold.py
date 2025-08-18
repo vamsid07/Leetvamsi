@@ -1,6 +1,6 @@
 class Solution:
     def smallestDivisor(self, nums: List[int], threshold: int) -> int:
-        right = 5*10**6
+        right = max(nums)
         left = 1
         def go(val) : 
             temp = 0 
