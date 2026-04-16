@@ -19,7 +19,6 @@ class Solution:
                 c2 = n - i + d[nums[i]]
                 c3 = n - i + first[nums[i]]
                 c4 = n - last[nums[i]] + d[nums[i]] 
-                print(i,c1,c2,c3,c4,last[nums[i]],d[nums[i]])
                 min_d[i] = min(c1,c2,c3)
                 min_d[d[nums[i]]] = min(min_d[d[nums[i]]],c1,c2,c4)
             d[nums[i]] = i 
