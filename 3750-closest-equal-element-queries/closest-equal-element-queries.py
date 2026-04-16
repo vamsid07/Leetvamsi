@@ -24,8 +24,8 @@ class Solution:
             d[nums[i]] = i 
         ans = []
         for i in range(len(queries)) : 
-            if min_d[queries[i]] == float('inf') : 
-                ans.append(-1)
-            else : 
-                ans.append(min_d[queries[i]])
+                if min_d[queries[i]] == float('inf') : 
+                    ans.append(-1)
+                else : 
+                    ans.append(min_d[queries[i]])
         return ans
