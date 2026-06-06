@@ -12,7 +12,7 @@ class Solution:
                 t1 = nums[curr] + go(curr+1,s[curr])
                 t2 = -INF
                 if prev == '0' : 
-                    t2 = nums[curr-1] + go(curr+1,'0')
+                    t2 = nums[curr-1] + go(curr+1,prev)
                 op2 = max(t1,t2)
             return max(op1,op2)
         ans = 0 
